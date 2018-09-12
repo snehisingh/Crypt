@@ -1,0 +1,36 @@
+{
+  "name": "crypt",
+  "description": "A web-baseddecentralized platform that runs smart contracts.",
+  "author": {
+    "name": "Snehil Singh"
+  },
+  "version": "1.0.0",
+  "keywords": [
+    "blockchain",
+    "medical",
+    "bitcoin"
+  ],
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+ 
+  "license": "MIT",
+  "dependencies": {
+    "async": "^1.4.2",
+    "express": "^4.13.4",
+    "serve-favicon": "^2.3.0",
+    "morgan": "^1.7.0",
+    "cookie-parser": "^1.4.3",
+    "body-parser": "~1.15.2",
+    "debug": "~2.2.0",
+    "jade": "~1.11.0",
+    "i18n": "0.8.3"
+  },
+  "homepage": "https://github.com/snehisingh/crypt",
+  "maintainers": [
+    {
+      "name": "Snehil Singh",
+      "email": "snehilstar121@gmail.com"
+    }
+  ]
+}

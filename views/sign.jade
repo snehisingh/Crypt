@@ -1,0 +1,277 @@
+html
+  head
+    title Blockchain Medical Encryption
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css', integrity='sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7', crossorigin='anonymous')
+  link(rel='stylesheet', src='stylesheets/main.css', integrity='sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7', crossorigin='anonymous')
+style.
+  /* Full-width input fields */
+  input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  }
+  /* Set a style for all buttons */
+  button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;  
+  }
+  /* Extra styles for the cancel button */
+  .cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+  }
+  /* Float cancel and signup buttons and add an equal width */
+  .cancelbtn,.signupbtn {float:left;width:50%}
+  /* Add padding to container elements */
+  .container {
+  padding: 40px 40px;
+  }
+  /* The Modal (background) */
+  .modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+  }
+  /* Modal Content/Box */
+  .modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  }
+  /* The Close Button (x) */
+  .close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  color: #000;
+  font-size: 40px;
+  font-weight: bold;
+  }
+  .close:hover,
+  .close:focus {
+  color: red;
+  cursor: pointer;
+  }
+  /* Clear floats */
+  .clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+  }
+  /* Change styles for cancel button and signup button on extra small screens */
+  @media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+  width: 100%;
+  }
+  } 
+h2 Create An Account
+button(onclick="document.getElementById('id01').style.display='block'", style='width:auto;') Sign Up
+#id01.modal
+  span.close(onclick="document.getElementById('id01').style.display='none'", title='Close Modal') ×
+  form.modal-content.animate(action='/action_page.php')
+    .container
+      label
+        b Email
+      input(type='text', placeholder='Enter Email', name='email', required='')
+      label
+        b Password
+      input(type='password', placeholder='Enter Password', name='psw', required='')
+      label
+        b Repeat Password
+      input(type='password', placeholder='Repeat Password', name='psw-repeat', required='')
+      input(type='checkbox', checked='checked')
+      |  Remember me
+      p
+        | By creating an account you agree to our 
+        a(href='#') Terms & Privacy
+        | .
+      .clearfix
+        button.cancelbtn(type='button', onclick="document.getElementById('id01').style.display='none'") Cancel
+        button.signupbtn(type='submit') Sign Up
+script.
+  // Get the modal
+  var modal = document.getElementById('id01');
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+  if (event.target == modal) {
+  modal.style.display = "none";
+  }
+  }
+style.
+  /* Full-width input fields */
+  input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  }
+  /* Set a style for all buttons */
+  button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  }
+  button:hover {
+  opacity: 0.8;
+  }
+  /* Extra styles for the cancel button */
+  .cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+  }
+  /* Center the image and position the close button */
+  .imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+  }
+  img.GiveAway {
+  width: 40%;
+  border-radius: 50%;
+  }
+  .container {
+  padding: 16px;
+  }
+  span.psw {
+  float: right;
+  padding-top: 16px;
+  }
+  /* The Modal (background) */
+  .modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+  }
+  /* Modal Content/Box */
+  .modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  }
+  /* The Close Button (x) */
+  .close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+  }
+  .close:hover,
+  .close:focus {
+  color: red;
+  cursor: pointer;
+  }
+  /* Add Zoom Animation */
+  .animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+  }
+  @-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)}
+  to {-webkit-transform: scale(1)}
+  }
+  @keyframes animatezoom {
+  from {transform: scale(0)}
+  to {transform: scale(1)}
+  }
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+  span.psw {
+  display: block;
+  float: none;
+  }
+  .cancelbtn {
+  width: 100%;
+  }
+  }
+h2 Login Form
+button(onclick="document.getElementById('id01').style.display='block'", style='width:auto;') Login
+#id01.modal
+  form.modal-content.animate(action='/action_page.php')
+    .imgcontainer
+      span.close(onclick="document.getElementById('id01').style.display='none'", title='Close Modal') ×
+      img.avatar(src='img_avatar2.png', alt='Avatar')
+    .container
+      label
+        b Username
+      input(type='text', placeholder='Enter Username', name='uname', required='')
+      label
+        b Password
+      input(type='password', placeholder='Enter Password', name='psw', required='')
+      button(type='submit') Login
+      input(type='checkbox', checked='checked')
+      |  Remember me
+    .container(style='background-color:#f1f1f1')
+      button.cancelbtn(type='button', onclick="document.getElementById('id01').style.display='none'") Cancel
+      span.psw
+        | Forgot 
+        a(href='#') password? 
+
+    // Include firebase.js
+    script(src='https://www.gstatic.com/firebasejs/live/3.0/firebase.js')
+    // Configure firebase
+    script.
+      var config = {
+      apiKey: "AIzaSyBck1FqsvSMsEmSuxswSq8L1R8wQmybwp8",
+      authDomain: "stock-market-193412.firebaseapp.com",
+      databaseURL: "https://stock-market-193412.firebaseio.com",
+      storageBucket: "stock-market-193412.appspot.com",
+      };
+      firebase.initializeApp(config);
+      // Handle auth events 
+      firebase.auth().onAuthStateChanged(function(user) {
+      window.user = user;
+      // Step 1:
+      //  If no user, sign in anonymously with firebase.auth().signInAnonymously()
+      //  If there is a user, log out out user details for debugging purposes.
+      });
+      
+
+      document.querySelector('#sign-in').addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      var email = document.querySelector('#email').value;
+      var password = document.querySelector('#password').value
+      var credential = firebase.auth.EmailAuthProvider.credential(email, password);
+      var auth = firebase.auth();
+      var currentUser = auth.currentUser;
+      });
+      document.querySelector('#sign-out').addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      firebase.auth().signOut();
+      });
